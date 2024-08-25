@@ -9,8 +9,7 @@ const SOLC_SETTINGS = {
   },
 };
 
-// const PRIVATE_KEY = process.env.PRIVATE_KEY || "";
-const PRIVATE_KEY = "43dfd9255cbaad2e6692320469d62f6c140f40cc58138e977ad769c98f916cba"
+const PRIVATE_KEY = process.env.PRIVATE_KEY || "";
 const accounts = [PRIVATE_KEY];
 
 const config: HardhatUserConfig = {
