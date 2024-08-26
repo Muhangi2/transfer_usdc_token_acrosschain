@@ -71,7 +71,7 @@ describe("TransferUSDCForkedTest", function () {
 
     it("Measures gas usage for ccipReceive and adjusts gasLimit", async function () {
         const amountToSend = ethers.parseUnits("1", 6); // 1 USDC
-        const gasLimit = 500_000;
+        const gasLimit = 500_000;                                                                       
 
         // Approve and Transfer USDC with Mock Router
         await usdc_AvalancheFuji.connect(sender).approve(transferUSDCWithMockRouter.address, amountToSend);
@@ -84,8 +84,8 @@ describe("TransferUSDCForkedTest", function () {
         const receipt = await tx.wait();
 
         // Calculate and log gas used
-        const gasUsed = receipt.gasUsed.toNumber();
-        const totalGasConsumedPlusTenPercent = Math.floor(gasUsed * 1.1);
+        const gas_used = receipt.gasUsed.toNumber();
+        const totalGasConsumedPlusTenPercent = Math.floor(gas_used * 1.1);
 
         console.log("Total Gas used (plus 10 percent):", totalGasConsumedPlusTenPercent);
 
