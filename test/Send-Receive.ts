@@ -15,7 +15,6 @@ describe("Sender and Receiver", function () {
     const Sender = await ethers.getContractFactory("Sender");
     const Receiver = await ethers.getContractFactory("Receiver");
     const BurnMintERC677 = await ethers.getContractFactory("BurnMintERC677");
-
     // Instantiate the contracts.
     const router = await Router.deploy();
     const link = await BurnMintERC677.deploy(
